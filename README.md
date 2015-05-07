@@ -27,8 +27,9 @@ Finally `/dev/sdf` will be used as root block device on new AMI.
 ## Difference with `amazon-chroot`
 
 - amazon-chroot doesn't allow do something on host machine -- it runs all commands in chrooted environment.
-- amazon-chroot requires run `packer` on a EC2 instance, but this doesn't.
+- amazon-chroot requires run `packer` on an existing EC2 instance, but this doesn't.
 - this launches `source_ami` to create AMI, each time.
+- this creates _empty_ EBS. amazon-chroot always requires source AMI as base.
 
 ## Author
 
